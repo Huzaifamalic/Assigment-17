@@ -187,7 +187,7 @@ body {
     .ham{
         display: none;
     }
-    
+   
   }
   @media (max-width: 768px) {
     .categories {
@@ -209,11 +209,28 @@ body {
         .categories{
             display: none;
         }
+        .sell{
+          display: none;
+        }
+        .login{
+            display: none;
+        }
+        
     }
     @media (max-width: 880px) {
         .select-wrapper{
             display: none;
 
+        }
+        .footer-1{
+          flex-direction: column;
+          
+        }
+        .footer-2{
+          flex-direction: column;
+        }
+        .footer-3{
+          text-align: center;
         }
     }
     @media (max-width: 680px) {
@@ -222,6 +239,7 @@ body {
           
 
         }
+        
     }
     
     
