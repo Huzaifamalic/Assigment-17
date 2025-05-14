@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Olx</title>
+        
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+              integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+              crossorigin="anonymous" 
+              referrerpolicy="no-referrer" />
+        <!-- Bootstrap CSS for styling -->
+         
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+        <!-- swiper slider link -->
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  
+        <!-- Your custom stylesheet -->
+        <link rel="stylesheet" href="style.css">
+        
+
+        </style>
+        <style>
+            body{
+                 background-color: #e4efff;
+            }
+        </style>
+    </head>
+<body>
+     <div class="navbar">
+        <div class="navbar-left">
+            <samp class="ham">
+                <i class="fa-solid fa-bars fa-lg" style="color: #000000;"></i>
+            </samp>
+            <a href="./index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="58" viewBox="0 0 75 58">
+                <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA6CAYAAAD4MKSOAAAAAXNSR0IArs4c6QAABVNJREFUeF7tmntQlFUYxh9mjIuOGLco6B+0lIsyAjoEBHTREVSYSRGSEK8IwiCUSTCSSChCilzcBmsCFYQ2wBhMiUATSQVTxhSFZkKwIUVLcDJlqBxozja77f07Z3eZgeWcf5jZfd73Pee3zznf+30fJqOjo6Pgg4qACYdFxUki4rDoWXFYDKw4LA6LhQCDlp9ZHBYDAQYpdxaHxUCAQcqdxWExEGCQcmdxWAwEGKTcWRwWAwEGKXeWMcByfSscXb29apfi7+mBltLPGJZpGOm4ddakgHV/YBD3BgYwNDwMe2trONjZwdzMlPmndVsRjs4e9c4K8PLAuZIJ6ixxQyOqm06j4UKrBJLyWODqgpDAAEQtC8bMFx2pwBkdrK/OnMUHBQfR3ddHBeCZKVMQHxGGjNgYWFlaao0xmm34z9OniE7PAHGULsPexhqNxSK4z35ZY7hRwHo8NIRlicloab+qCydZzDQLC9Tsz0WQn4/aPBN+G46MjCAofiua2i7pBUoabGZqirbyw5g/Z7ZKvgnvrOR9eSisEBsElDTJC7a2aBeXg/yVH7Sw/nwyBEu/QJU57d2agNQN6xQ+j8/ORXFVjcJnU83N8aTte6o1UfdZP9y4Ce8oxeJUFShEK958HcfzPjYoLJIsf/t7SH5ntSSvOlDk8zGBtSg2HmcuXaZYum6Sa1WVCgf+3JURuHmrR22yQC9PNJd8KvmOnKHTfVWdJQ0kwHrv3EVRpfodQc7Ox60tVJOmctbtu/1wWhpKlVBXUdyqlSjekSoL13cb0s7D4M46UF6BbXkFgvVdnJyQm5wID+c5sHl2Bn7qvY2K+gbklR0TjHV8zg6/NtbLdLRXQyFnCRU2uLMiUtJQ1Xhaa93nbW3Qc6oOFmZmKrr9R49he36h0Lxxp6lecntEBq2ztJ1HggWVzjUhPdU29InegLbrHVpz7Xs3Ce+vjdKosfD2w/Bff2vNcbGsFD7u8yQaWmdJE2o6wLUVzE5MQNpG+osWFSyHRcHof/BA60JPFB5ASKC/Rs28sLdxo/uW1hwVe7MQGRzE7CwSQP7NbM2OnZJtTzM+3LwJH8XH0khlGipY9m8swW+Dg1oT1xXkIfS1AI0a91Wr0fFzt9YcZbszsWb5Up2cRYI2Ze5GSW0dFQDiKOIslkEFi2ah5GBPWRetsbbJ/IWC82o8JMLiV7x1grVlTw4OVR8XrCEvyEqIQ3rMRuoYKlg0PRbpwLtP1kqaPOWRe/goUgtFgpOS77Um7AGfLirGns9LBRfrNmsmcpL+ax2sZ1hKWoeyr0+hoOILwdjp06bi0YVzMh3tAT/uWgdy1pCtOJZjbchyHMnKkJWgdZame0PauRq8KSWF/dfH4PzVH2nnwKzrqBFj7kuzmGEJOYu0NL/090MkrlI7J4M3paTKlc4uLIzUfIAz05ELiFiyGOLcbIUUhnBWRlwMdsVtluQlDyvLT/5/hyAtNibOIsnTij5BTukRfbioxJILw7XqSthZWRkUFmmQiaukgzyLi0xLx5ffNinUGTNYpPEjT0m/OX/RIMCM+uEfIUTOiNCkbTh7+YpewMg9JHmGFfyqr9o8tFdDvSbBGEzVZynnJC8s1u/MpL61UI6fNC8s5Bde+10zUvKLmF6FbQkPw664SfQqTNkpJ5pb0Hq9A+2dXWjv6sLgH49kEvK6y8vFGQvcXBHs5wsnRwcq8xvNNhRabd+9+/j94UN4ujgLSTV+P2lg6UxILpC2zzJELdocOh3wtMn10XFY+tAbB7Hj1lnjgI3KFDgshl+Fw+KwGAgwSLmzOCwGAgxS7iwOi4EAg/RfrUE2gJIz3pIAAAAASUVORK5CYII=" x="0" y="0" width="75" height="58"/>
+              </svg>
+              </a>
+              <samp class="sam-1">
+                <i class="fa-solid fa-car" style="font-size: 20px; color: #000000;"></i>
+
+                <a href="./moter.html">Motors</a>
+              </samp>
+               <samp class="sam-2"><i class="fa-regular fa-building fa-lg" style="color: #000000;"></i>
+               </samp>
+               <a class="sam-2-a" href="./proportiy.html">Property</a>
+        </div>
+        <div class=" ">
+        <div class="navbar-center">
+            
+            <div class="select-wrapper">
+                <i class="fa-solid fa-location-dot fa-lg icon-left"></i>
+                <select class="inp-1">
+                  <option>Pakistan</option>
+                </select>
+              </div>
+              
+            <input class="inp-2" type="text" placeholder="Find Cars, Mobile Phones and more...">
+           <samp class="sam-4">
+            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
+           </samp>
+            <div class="navbar-right">
+                <a href="#" class="login mt-2"> <u> Login</u>
+                    
+                </a>
+                <a href="#" class="sell ">SELL</a>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    
+
+   <div class="container  d-flex justify-content-beetween mt-5 gap-5">
+   
+     <div class="  p-4 rounded pro-inp-1">
+        <h4>
+Search properties for sale</h4>
+        <p class="rounded-5 bg-succsess p-1"><samp class="por-sam-1 rounded-5">Sale</samp><samp>Reant</samp></p>
+          <div class="select-wrapper mb-5">
+                <i class="fa-solid fa-building fa-lg icon-left"></i>
+                <select class="inp-1">
+                  <option>Land & plot</option>
+                </select>
+              </div>
+          <div class="select-wrapper mb-3">
+                <i class="fa-solid fa-magnifying-glass fa-lg icon-left"></i>
+                <select class="inp-1">
+                  <option>Land & plot</option>
+                </select>
+              </div>
+              <input class= "inp-p mb-4 mt-2" type="text" name="" id="">
+              <input class="inp-p" type="text" name="" id="">
+              <input class="w-100 bg-dark mb-5" type="range" name="" id="">
+              <button class="submit rounded"> <i class="fa-solid fa-magnifying-glass fa-lg icon-left"></i> Sarch</button>
+          
+
+
+     </div>
+
+
+     <div class=" p-4 rounded pro-inp-3">
+   <h3>Browse Properties</h3>
+    <button class="btn-1-p">Popular</button>
+    <button class="btn-2-p">Area unit</button>
+    <button class="btn-2-p">Cetagery</button>
+    <button class="btn-2-p">citize</button>
+    <button class="btn-2-p">Price range</button>
+    <div class="row">
+       <div class="tab mt-5 col-12 col-sm-6 col-md-2  text-center aling-items-center gap-5">
+            <p>15</p>
+            <p>Marhala</p>
+           
+       </div>
+       <div class="tab mt-5 col-12 col-sm-6 col-md-4  text-center aling-items-center">
+            <p>15</p>
+            <p>Marhala</p>
+           
+       </div>
+       <div class="tab mt-5 col-12 col-sm-6 col-md-4  text-center aling-items-center">
+            <p>15</p>
+            <p>Marhala</p>
+           
+       </div>
+       <div class="tab mt-5 col-12 col-sm-6 col-md-4  text-center aling-items-center">
+            <p>15</p>
+            <p>Marhala</p>
+           
+       </div>
+       <div class="tab mt-5 col-12 col-sm-6 col-md-4  text-center aling-items-center">
+            <p>15</p>
+            <p>Marhala</p>
+           
+       </div>
+       <div class="tab mt-5 col-12 col-sm-6 col-md-4  text-center aling-items-center">
+            <p>15</p>
+            <p>Marhala</p>
+           
+       </div>
+    </div>
+     </div>
+    </div>
+    <div class="w-100 bg-light text-center mt-5">
+       
+        <div class="">
+           <img src="https://tpc.googlesyndication.com/simgad/4763935553869043770" alt="">
+    </div>
+    <div class="w-100 bg-light text-center mt-5">
+        <div class="container">
+            <div class="card-group">
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/530959418-800x600.webp" class="card-img-top" alt="... " height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/533431594-800x600.webp" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div> <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          
+        </div>
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/533747954-800x600.webp" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div> <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+    <div class="w-100 bg-light text-center mt-5">
+        <div class="container">
+            <div class="card-group">
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/530959418-800x600.webp" class="card-img-top" alt="... " height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/533431594-800x600.webp" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div> <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          
+        </div>
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/533747954-800x600.webp" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div> <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+    <div class="w-100 bg-light text-center mt-5">
+        <div class="container">
+            <div class="card-group">
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/530959418-800x600.webp" class="card-img-top" alt="... " height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/533431594-800x600.webp" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div> <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          
+        </div>
+        <div class="card">
+          <img src="https://images.olx.com.pk/thumbnails/533747954-800x600.webp" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+
+                    <h5 class="card-title">Rs 175,000</h5>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
+                </div>
+
+            </div> <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+     <footer class="footer mt-5">
+      <div class="container-fluid bg-light py-4">
+        <div class="row align-items-center text-center text-md-start">
+          <div class="col-md-2 mb-3 mb-md-0">
+            <img src="https://www.olx.com.pk/assets/olxMobileApp.f5579f77e849b600ad60857e46165516.webp" alt="footer-img" class="img-fluid">
+          </div>
+          <div class="col-md-6 mb-3 mb-md-0">
+            <h5>TRY THE OLX APP</h5>
+            <p>Buy, sell and find just about anything using the app on your mobile.</p>
+          </div>
+          <div class="col-md-4 text-center text-md-start">
+            <h6>GET YOUR APP TODAY</h6>
+            <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2">
+              <img src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" alt="" width="128" height="40">
+              <img src="https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" alt="" width="128" height="40">
+              <img src="https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg" alt="" width="128" height="40">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container mt-5">
+        <div class="row text-center text-md-start">
+          <div class="col-6 col-md-2 mb-3">
+            <h6>Popular Categories</h6>
+            <p>Cars</p>
+            <p>Flats for rent</p>
+            <p>Mobile Phones</p>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h6>Trending Searches</h6>
+            <p>Bikes</p>
+            <p>Watches</p>
+            <p>Books</p>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h6>About Us</h6>
+            <p>Contact Us</p>
+            <p>OLX Blog</p>
+            <p>About Dubizzle Group</p>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h6>OLX</h6>
+            <p>Help</p>
+            <p>Sitemap</p>
+            <p>Terms of use</p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <h6>Follow us</h6>
+            <div class="mb-2">
+              <i class="fa-brands fa-facebook fa-lg mx-1" style="color: #557477;"></i>
+              <i class="fa-brands fa-youtube fa-lg mx-1" style="color: #557477;"></i>
+              <i class="fa-brands fa-instagram fa-lg mx-1" style="color: #557477;"></i>
+            </div>
+            <div class="d-flex justify-content-center justify-content-md-start gap-2">
+              <img src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" alt="" width="84" height="28">
+              <img src="https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" alt="" width="84" height="28">
+              <img src="https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg" alt="" width="84" height="28">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="text-end  py-3 sm-text-center mt-3 footer-3">
+        <small>Free Classifieds in Pakistan. © 2006-2025 OLX</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+KW1oZ0/3z63xg7MI5F4W+0+Q5KFw" crossorigin="anonymous"></script>
+      
+</body>
+</html>

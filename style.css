@@ -350,7 +350,8 @@ body {
     box-shadow: 0 18px 6px -6px rgba(0, 0, 0, 0.3); /* sirf bottom shadow */
     margin-bottom: -100px;
     border: #000000 solid 1px;
-    z-index: 2;
+   
+
     
   }
   
@@ -371,17 +372,31 @@ body {
       background-color: #002f34;
       color: #ffffff;
     }
+    .btn-1-m i:hover{
+      
+      color: #ffffff;
+    }
     li{
       list-style: none;
       width: 176px;
       height: 40px;
-      background-color: #ffffff;
+     
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 10px;
       text-align: center;
     }
-
+.moter-img{
+    width: 182px;
+    height: 103px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #ffffff;
+}
   @media (max-width: 880px) {
     .sell,
     .login {
@@ -410,6 +425,63 @@ body {
     text-decoration: none;
   }
   
+  .pro-inp-1{
+    width: 370px;
+    height:  448px;
+    background-color: #ffffff;
+    text-align: center;
+
+    
+  }
+  .pro-inp-1 p{
+  
+    background-color: #e1ebfd;
+    width: 100px;
+  } 
+  .pro-sam-1{
+    background-color: #c7dcff;
+    border-radius: 10px;
+
+  }
+  .inp-p{
+    width: 100px;
+    height: 30px;
+  }
+   .pro-inp-3{
+    width: 1018px;
+    background-color: #ffffff;
+   }
+   .pro-inp-3 button{
+    width: 100px;
+    height: 43px;
+    border-radius: 40px;
+    
+    border: none;
+    /* background-color: #f3f4f6; */
+   }
+   .btn-1-p{
+    background-color: #002f34 ;
+    color: #ffffff;
+
+   }
+  
+   .btn-2-p{
+    background-color: #f3f4f6 ;
+    color: #000000;
+
+   }
+  .submit {
+    width: 320px;
+    height: 40px;
+    background-color: #3a77ff;
+    
+  }
+  .tab {
+    width: 129px;
+    height: 118px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
   @media (max-width: 768px) {
     .card-1,
   .right-column {
